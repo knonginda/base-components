@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="50px" viewBox="0 0 52 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Esign</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="esign" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="esign" transform="translate(-85.000000, -546.000000)" stroke="currentColor" stroke-width="2">
+            <g id="esign" transform="translate(86.000000, 547.000000)">
+                <path d="M50.0001,22.33 L33.9141,16.908" id="Stroke-1"></path>
+                <path d="M28.2628,15.8173 C28.2628,15.8173 24.8968,14.7623 20.8308,17.8363 L11.4118,23.8023 L2.9858,34.7903 C2.9858,34.7903 6.1698,38.6693 11.0288,35.8923" id="Stroke-3"></path>
+                <polyline id="Stroke-5" points="14.6846 29.3964 44.0806 0.0004 47.4516 3.3714 21.3756 29.4454"></polyline>
+                <path d="M27.9923,22.829 C27.9923,22.829 31.6383,26.957 27.7713,29.932 L13.1843,29.932 C13.1843,29.932 10.6403,30.069 10.3593,33.216 C10.0783,36.362 12.7383,37.07 12.7383,37.07 L26.4823,37.07 C26.4823,37.07 30.4483,38.458 35.3053,41.829 C35.3053,41.829 44.5473,43.713 50.0003,37.07" id="Stroke-7"></path>
+                <path d="M32.1417,39.8134 C32.2037,41.5144 30.9667,43.1684 29.0727,43.2034 C29.0177,43.2044 28.9627,43.2044 28.9067,43.2034 C28.0207,43.1914 27.1777,42.7874 26.5787,42.1344 L21.9307,37.0684" id="Stroke-9"></path>
+                <path d="M21.9308,37.0682 C21.9948,37.1542 22.7358,38.1052 22.7898,38.1942 C24.0808,40.2682 22.7258,43.1572 20.2148,43.2032 C20.1598,43.2042 20.1058,43.2042 20.0488,43.2032 C19.1618,43.1912 18.3208,42.7872 17.7208,42.1342 L14.2788,38.3812 L12.9748,37.0702" id="Stroke-11"></path>
+                <polyline id="Stroke-13" points="14.1651 37.0702 5.5521 45.9942 0.0001 48.0002 2.1541 42.3882 7.6511 36.8912"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

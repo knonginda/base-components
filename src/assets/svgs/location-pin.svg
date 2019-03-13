@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="38px" height="51px" viewBox="0 0 38 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Location Pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="location-pin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="location-pin" transform="translate(-93.000000, -847.000000)" stroke="currentColor" stroke-width="2">
+            <g id="location-pin" transform="translate(94.000000, 848.000000)">
+                <path d="M35.5262,17.8001 C35.5262,8.4651 27.6472,0.8971 17.9262,0.8971 C8.2062,0.8971 0.3272,8.4651 0.3272,17.8001 C0.3272,20.9921 1.2492,23.9781 2.8502,26.5251 L17.9412,48.8971 L33.0102,26.5111 C34.6072,23.9671 35.5262,20.9871 35.5262,17.8001 Z" id="Stroke-3"></path>
+                <path d="M25.4236,17.7313 C25.4236,21.7083 22.0676,24.9313 17.9266,24.9313 C13.7856,24.9313 10.4296,21.7083 10.4296,17.7313 C10.4296,13.7543 13.7856,10.5313 17.9266,10.5313 C22.0676,10.5313 25.4236,13.7543 25.4236,17.7313 Z" id="Stroke-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

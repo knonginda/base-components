@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@components/_base-grid renders its content 1`] = `
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <!---->
+        <th class="">
+          Last Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+        <th class="">
+          First Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+        <th class="">
+          ID
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!---->
+        <td>AA</td>
+        <td>AAA</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <!---->
+        <td>BB</td>
+        <td>BBB</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="bottomSpace">
+    <div class="total">
+      Total:
+      <strong>26</strong></div>
+    <ul name="Pagination" class="pagination">
+      <!---->
+      <li class="pageItem currentPage"><a href="#" class="pageLink">1</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">2</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">3</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">4</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">5</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">6</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">7</a></li>
+      <li class="pageItem"><a class="pageLink">...</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">13</a></li>
+      <li class="pageItem"><a href="#" class="pageLink"><span class="small baseIcon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="svg-inline--fa fa-caret-right fa-w-6"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" class=""></path></svg></span></a></li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`@components/_base-grid renders its content by click header 1`] = `
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <!---->
+        <th class="active">
+          Last Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-down fa-w-10"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" class=""></path></svg></span></th>
+        <th class="">
+          First Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+        <th class="">
+          ID
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!---->
+        <td>ZZ</td>
+        <td>ZZZ</td>
+        <td>26</td>
+      </tr>
+      <tr>
+        <!---->
+        <td>YY</td>
+        <td>YYY</td>
+        <td>25</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="bottomSpace">
+    <div class="total">
+      Total:
+      <strong>26</strong></div>
+    <ul name="Pagination" class="pagination">
+      <!---->
+      <li class="pageItem currentPage"><a href="#" class="pageLink">1</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">2</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">3</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">4</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">5</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">6</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">7</a></li>
+      <li class="pageItem"><a class="pageLink">...</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">13</a></li>
+      <li class="pageItem"><a href="#" class="pageLink"><span class="small baseIcon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="svg-inline--fa fa-caret-right fa-w-6"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" class=""></path></svg></span></a></li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`@components/_base-grid renders its content when filter by DD 1`] = `
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <!---->
+        <th class="">
+          Last Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+        <th class="">
+          First Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+        <th class="">
+          ID
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!---->
+        <td>DD</td>
+        <td>DDD</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="bottomSpace">
+    <div class="total">
+      Total:
+      <strong>1</strong></div>
+    <ul name="Pagination" class="pagination">
+      <!---->
+      <li class="pageItem currentPage"><a href="#" class="pageLink">1</a></li>
+      <!---->
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`@components/_base-grid renders its content when order by DESC sort by ID 1`] = `
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <!---->
+        <th class="">
+          Last Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+        <th class="">
+          First Name
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg></span></th>
+        <th class="active">
+          ID
+          <span class="small baseIcon sortIcon" style="color: rgb(255, 255, 255);"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-down fa-w-10"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" class=""></path></svg></span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!---->
+        <td>ZZ</td>
+        <td>ZZZ</td>
+        <td>26</td>
+      </tr>
+      <tr>
+        <!---->
+        <td>YY</td>
+        <td>YYY</td>
+        <td>25</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="bottomSpace">
+    <div class="total">
+      Total:
+      <strong>26</strong></div>
+    <ul name="Pagination" class="pagination">
+      <!---->
+      <li class="pageItem currentPage"><a href="#" class="pageLink">1</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">2</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">3</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">4</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">5</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">6</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">7</a></li>
+      <li class="pageItem"><a class="pageLink">...</a></li>
+      <li class="pageItem"><a href="#" class="pageLink">13</a></li>
+      <li class="pageItem"><a href="#" class="pageLink"><span class="small baseIcon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="svg-inline--fa fa-caret-right fa-w-6"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z" class=""></path></svg></span></a></li>
+    </ul>
+  </div>
+</div>
+`;

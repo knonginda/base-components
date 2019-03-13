@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="51px" height="50px" viewBox="0 0 51 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Ban</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ban" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="ban" transform="translate(-576.000000, -250.000000)" stroke="currentColor" stroke-width="2">
+            <g id="ban" transform="translate(577.000000, 250.000000)">
+                <path d="M41.0178,8.0225 C50.3918,17.3945 50.3918,32.5895 41.0178,41.9625 C31.6458,51.3355 16.4518,51.3355 7.0798,41.9625 C-2.2942,32.5895 -2.2942,17.3945 7.0798,8.0225 C16.4518,-1.3505 31.6458,-1.3505 41.0178,8.0225 Z" id="Stroke-9"></path>
+                <path d="M7.0783,8.0225 L41.0183,41.9625" id="Stroke-11"></path>
+            </g>
+        </g>
+    </g>
+</svg>

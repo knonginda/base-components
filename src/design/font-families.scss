@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Din";
+  src: url("~@assets/fonts/DINWeb.woff") format('woff');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Din";
+  src: url("~@assets/fonts/DINWeb-Ita.woff") format('woff');
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Din";
+  src: url("~@assets/fonts/DINWeb-Medium.woff") format('woff');
+  font-weight: bold;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Din";
+  src: url("~@assets/fonts/DINWeb-MediumIta.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Proxima";
+  src: url("~@assets/fonts/ProximaNova-RegWeb.woff") format('woff');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Proxima";
+  src: url("~@assets/fonts/ProximaNova-RegItWeb.woff") format('woff');
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Proxima";
+  src: url("~@assets/fonts/ProximaNova-SboldWeb.woff") format('woff');
+  font-weight: bold;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Proxima";
+  src: url("~@assets/fonts/ProximaNova-SboldItWeb.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "ehealthglobalcomponents";
+  src: url("~@assets/fonts/ehealth-globalheaderfooter.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}

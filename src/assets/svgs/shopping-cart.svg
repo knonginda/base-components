@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="48px" viewBox="0 0 54 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Shopping Cart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="shopping-cart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="shopping-cart" transform="translate(-85.000000, -249.000000)" stroke="currentColor" stroke-width="2">
+            <g id="shopping-cart" transform="translate(85.000000, 250.000000)">
+                <path d="M34.4283,41.5715 C34.4283,43.6245 36.0893,45.2855 38.1433,45.2855 C40.1963,45.2855 41.8573,43.6245 41.8573,41.5715 C41.8573,39.5185 40.1963,37.8575 38.1433,37.8575 C36.0893,37.8575 34.4283,39.5185 34.4283,41.5715 Z" id="Stroke-1"></path>
+                <path d="M8.4283,41.5715 C8.4283,43.6245 10.0893,45.2855 12.1433,45.2855 C14.1963,45.2855 15.8573,43.6245 15.8573,41.5715 C15.8573,39.5185 14.1963,37.8575 12.1433,37.8575 C10.0893,37.8575 8.4283,39.5185 8.4283,41.5715 Z" id="Stroke-3"></path>
+                <polyline id="Stroke-5" stroke-linecap="round" points="52.9996 0.7141 43.7146 0.7141 38.1436 37.8571 12.1436 37.8571"></polyline>
+                <polyline id="Stroke-7" stroke-linecap="round" points="38.1431 30.4285 4.7141 30.4285 0.9991 8.1425"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

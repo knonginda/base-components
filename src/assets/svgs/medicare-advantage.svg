@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Medicare Advantage</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="medicare-advantage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="medicare-advantage" transform="translate(-670.000000, -244.000000)" stroke="currentColor" stroke-width="2">
+            <g id="medicare-advantage" transform="translate(671.000000, 245.000000)">
+                <path d="M21.7501,40.4999 L25.5001,40.4999 C26.7431,40.4999 27.7501,39.4929 27.7501,38.2499 C27.7501,37.0069 26.7431,35.9999 25.5001,35.9999 L21.7501,35.9999 L21.7501,44.9999" id="Stroke-1" stroke-linecap="round"></path>
+                <path d="M32.2501,47.9999 L24.7501,40.4999" id="Stroke-3" stroke-linecap="round"></path>
+                <path d="M24.7501,47.9999 L32.2501,40.4999" id="Stroke-5" stroke-linecap="round"></path>
+                <path d="M27.0001,-0.0001 L27.0001,27.4879" id="Stroke-7"></path>
+                <path d="M3.8516,40.9052 L27.0906,27.4882" id="Stroke-9"></path>
+                <path d="M50.1485,40.9052 L26.9095,27.4882" id="Stroke-11"></path>
+                <path d="M54.0001,26.9999 C54.0001,41.9109 41.9111,53.9999 27.0001,53.9999 C12.0891,53.9999 0.0001,41.9109 0.0001,26.9999 C0.0001,12.0889 12.0891,-0.0001 27.0001,-0.0001 C41.9111,-0.0001 54.0001,12.0889 54.0001,26.9999 Z" id="Stroke-13"></path>
+                <path d="M14.3048,11.8202 L14.3048,25.8202" id="Stroke-15" stroke-linecap="round"></path>
+                <path d="M21.3048,18.8202 L7.3048,18.8202" id="Stroke-17" stroke-linecap="round"></path>
+                <path d="M32.5001,26.3202 L32.5001,23.6552 C32.5001,22.8692 33.0821,22.1692 33.9601,21.9062 L35.8391,21.3202 L39.9451,24.1102 C40.2811,24.3402 40.7191,24.3402 41.0551,24.1102 L45.1601,21.3202 L47.0511,21.9102 C47.9171,22.1692 48.5001,22.8692 48.5001,23.6552 L48.5001,26.3202" id="Stroke-19" stroke-linecap="round"></path>
+                <path d="M44.5001,15.3202 C44.5001,17.5292 42.7091,19.3202 40.5001,19.3202 C38.2911,19.3202 36.5001,17.5292 36.5001,15.3202 C36.5001,13.1112 38.2911,11.3202 40.5001,11.3202 C42.7091,11.3202 44.5001,13.1112 44.5001,15.3202 Z" id="Stroke-21" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

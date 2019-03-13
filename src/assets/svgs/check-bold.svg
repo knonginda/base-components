@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="51px" height="51px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Check-bold</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="eHealth-line-icon-06302017" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="eHealth-General-Line-Icons-2017-4" transform="translate(-380.000000, -399.000000)">
+            <g id="Check-bold" transform="translate(381.000000, 400.000000)">
+                <path d="M48.259,24.6816 C48.259,37.9176 37.489,48.6876 24.253,48.6876 C11.029,48.6876 0.259,37.9176 0.259,24.6816 C0.259,11.4466 11.029,0.6876 24.253,0.6876 C37.489,0.6876 48.259,11.4466 48.259,24.6816 Z" id="Stroke-45" stroke="currentColor" stroke-width="2"></path>
+                <path d="M36.8635,19.2949 L21.4335,34.7249 C21.2635,34.8849 21.0535,34.9749 20.8345,34.9749 C20.6135,34.9749 20.3935,34.8849 20.2235,34.7249 L11.6535,26.1549 C11.3135,25.8149 11.3135,25.2749 11.6535,24.9349 L15.0845,21.5049 C15.4135,21.1749 15.9535,21.1749 16.2945,21.5049 L20.8345,26.0449 L32.2235,14.6549 C32.5635,14.3149 33.1035,14.3149 33.4335,14.6549 L36.8635,18.0849 C37.2035,18.4149 37.2035,18.9549 36.8635,19.2949" id="Fill-47" fill="currentColor"></path>
+            </g>
+        </g>
+    </g>
+</svg>

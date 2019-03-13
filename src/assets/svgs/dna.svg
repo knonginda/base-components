@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="33px" height="53px" viewBox="0 0 33 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>DNA</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="eHealth-line-icon-06302017" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="eHealth-Healthcare-Icons-2017" transform="translate(-290.000000, -548.000000)" stroke="currentColor" stroke-width="2">
+            <g id="DNA" transform="translate(291.000000, 549.000000)">
+                <path d="M4.218,42.0405 L26.218,42.0405" id="Stroke-6"></path>
+                <path d="M26.218,48.0405 L4.218,48.0405" id="Stroke-8"></path>
+                <path d="M20.218,30.0405 L10.218,30.0405" id="Stroke-10"></path>
+                <path d="M5.218,36.0405 L25.218,36.0405" id="Stroke-12"></path>
+                <path d="M26.218,8.0405 L4.218,8.0405" id="Stroke-14"></path>
+                <path d="M4.218,2.0405 L26.218,2.0405" id="Stroke-16"></path>
+                <path d="M10.218,20.0405 L20.218,20.0405" id="Stroke-18"></path>
+                <path d="M25.218,14.0405 L5.218,14.0405" id="Stroke-20"></path>
+                <path d="M30.218,0.0405 L30.218,10.0405 C30.218,18.3245 23.502,25.0405 15.218,25.0405 C6.934,25.0405 0.218,18.3245 0.218,10.0405 L0.218,0.0405" id="Stroke-22"></path>
+                <path d="M30.218,50.0405 L30.218,40.0405 C30.218,31.7565 23.502,25.0405 15.218,25.0405 C6.934,25.0405 0.218,31.7565 0.218,40.0405 L0.218,50.0405" id="Stroke-24"></path>
+            </g>
+        </g>
+    </g>
+</svg>
