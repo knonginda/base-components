@@ -1,7 +1,12 @@
 {
   "name": "@knonginda/base-components",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "## How to use: 1. Just use `npm install --save @knonginda/base-components` 2. Use the components in your file directly.",
+=======
+  "private": true,
+  "description": "## How to use: 1. Just use `npm install --save @bo/base-components` 2. Use the components in your file directly.",
+>>>>>>> 43a3d42df07074098fa2cd14f6719d1c24eac142
   "main": "./dist/base-components.common.js",
   "repository": {
     "type": "git",
