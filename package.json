@@ -1,7 +1,7 @@
 {
-  "name": "@bo/base-components",
+  "name": "@knonginda/base-components",
   "version": "1.0.0",
-  "description": "## How to use: 1. Just use `npm install --save @bov3/base-components` 2. Use the components in your file directly.",
+  "description": "## How to use: 1. Just use `npm install --save @knonginda/base-components` 2. Use the components in your file directly.",
   "main": "./dist/base-components.common.js",
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@fortawesome/vue-fontawesome": "^0.1.4",
     "lodash": "^4.17.11",
+    "user": "0.0.0",
     "vue": "^2.5.21"
   },
   "devDependencies": {
@@ -59,11 +60,10 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "author": "Jett Liu",
+  "author": "knonginda",
   "license": "ISC",
   "keywords": [
     "vue",
-    "bov3",
     "components"
   ]
 }
