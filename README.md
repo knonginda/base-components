@@ -2,7 +2,7 @@
 
 ## Installation and Usage
 
-1. Just use npm install --save @flockos/vue-components
+1. Just use npm install --save @bo/base-components
 2. Now you can include the scripts by using following snippet:
 
 ```bash
