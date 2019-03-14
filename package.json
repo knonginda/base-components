@@ -2,7 +2,7 @@
   "name": "@bo/base-components",
   "version": "1.0.0",
   "private": true,
-  "description": "## How to use: 1. Just use `npm install --save @bov3/base-components` 2. Use the components in your file directly.",
+  "description": "## How to use: 1. Just use `npm install --save @bo/base-components` 2. Use the components in your file directly.",
   "main": "./dist/base-components.common.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",
