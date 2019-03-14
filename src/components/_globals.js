@@ -29,3 +29,8 @@ requireComponent.keys().forEach((fileName) => {
   // Globally register the component
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
+
+// Include SVG files
+const requireAll = (requireContext) => requireContext.keys().map(requireContext)
+const req = require.context('@assets/svgs/', false, /\.svg$/)
+requireAll(req)

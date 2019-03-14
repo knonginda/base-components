@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <BaseButton>Test</BaseButton>
+  <BaseIcon source="ehealth" name="home"/>
 </template>
 
 <!-- This should generally be the only global CSS in the app. -->

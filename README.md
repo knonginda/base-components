@@ -1,37 +1,19 @@
-# Vue Backoffice Boilerplate
+# Backoffice Base Components
 
-## Getting started
+## Installation and Usage
+
+1. Just use npm install --save @flockos/vue-components
+2. Now you can include the scripts by using following snippet:
 
 ```bash
-# 1. Clone the repository.
-git clone https://git.ehealthinsurance.com/scm/bo/vuejs-demo.git
+import Components from '@bo/base-components';
 
-# 2. Enter your newly-cloned folder.
-cd vuejs-bo
-
-# 3. Install dependencies.
-npm install
-
-# 4. Run dev serve.
-npm run dev
-
-# 5. Run unit test.
-npm run test
-
-# 6. Build for production.
-npm run build
+// Global registration in your main.js/App.vue file
+Object.entried(Components).forEach((name, component) => {
+    Vue.component(name, component);
+});
 ```
 
-## Documentation
+## List of components
 
-This project includes a docs folder with more details on:
-
-1. [Setup and development](docs/development.md)
-2. [Architecture](docs/architecture.md)
-3. [Languages and technologies](docs/tech.md)
-4. [Routing, layouts, and views](docs/routing.md)
-5. [State management](docs/state.md)
-6. [Tests and mocking the API](docs/tests.md)
-7. [Linting and formatting](docs/linting.md)
-8. [Editor integration](docs/editors.md)
-9. [Troubleshooting](docs/troubleshooting.md)
+All components are registered with the Vue global and are available for use. You do not need to re-register them.
