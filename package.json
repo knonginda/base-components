@@ -1,9 +1,12 @@
 {
   "name": "@bo/base-components",
   "version": "1.0.0",
-  "private": true,
   "description": "## How to use: 1. Just use `npm install --save @bov3/base-components` 2. Use the components in your file directly.",
   "main": "./dist/base-components.common.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/knonginda/base-components.git"
+  },
   "scripts": {
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build --target lib --name base-components ./src/components/_globals.js",
