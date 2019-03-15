@@ -264,6 +264,13 @@ export default {
   border-collapse: collapse;
   text-align: left;
 
+  th,
+  td {
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+  }
+
   th {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.66);
