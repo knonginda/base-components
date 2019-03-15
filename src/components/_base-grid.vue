@@ -256,9 +256,13 @@ export default {
 @import '@design';
 
 .table {
+  width: 100%;
+  height: 100%;
   border: 2px solid $blue;
   border-radius: 3px;
   background-color: #fff;
+  border-collapse: collapse;
+  text-align: left;
 
   th {
     cursor: pointer;
