@@ -313,10 +313,6 @@ th {
   }
 }
 
-td {
-  background-color: #f9f9f9;
-}
-
 .sortIcon {
   width: 14px;
   height: 14px;
