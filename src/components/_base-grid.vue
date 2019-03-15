@@ -200,6 +200,7 @@ export default {
           <th
             v-for="(column, index) in columns"
             :key="index"
+            :style="{ width: column.width }"
             :class="sortKey === column.key ? $style.active : ''"
             @click="sortBy(column)"
           >
@@ -207,10 +208,17 @@ export default {
             <BaseIcon
               v-if="sortOrders[column.key] > 0"
               :class-name="$style.sortIcon"
-              color="#ffffff"
-              name="caret-up"
+              source="ehealth"
+              name="up-arrow"
+              size="xsmall"
             ></BaseIcon>
-            <BaseIcon v-else :class-name="$style.sortIcon" color="#ffffff" name="caret-down"></BaseIcon>
+            <BaseIcon
+              v-else
+              :class-name="$style.sortIcon"
+              source="ehealth"
+              name="down-arrow"
+              size="xsmall"
+            ></BaseIcon>
           </th>
         </tr>
       </thead>
@@ -258,42 +266,55 @@ export default {
 .table {
   width: 100%;
   height: 100%;
-  border: 2px solid $blue;
+  border: 1px solid $light-grey;
   border-radius: 3px;
   background-color: #fff;
   border-collapse: collapse;
   text-align: left;
+}
 
-  th,
+tr:nth-child(even) {
   td {
-    padding: 10px;
-    vertical-align: top;
-    border: 1px solid #dee2e6;
+    background-color: $lightestx-grey;
+  }
+}
+
+th,
+td {
+  padding: 9px;
+  vertical-align: top;
+  border: 1px solid $light-grey;
+}
+
+th {
+  cursor: pointer;
+  color: #333;
+  background-color: $lightest-grey;
+  user-select: none;
+
+  > span {
+    color: #333 !important;
   }
 
-  th {
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.66);
-    background-color: $blue;
-    user-select: none;
+  svg {
+    display: none;
+  }
+
+  &.active {
+    opacity: 1;
 
     > span {
-      color: rgba(255, 255, 255, 0.66) !important;
+      color: #333 !important;
     }
 
-    &.active {
-      opacity: 1;
-      color: #fff;
-
-      > span {
-        color: #fff !important;
-      }
+    svg {
+      display: block;
     }
   }
+}
 
-  td {
-    background-color: #f9f9f9;
-  }
+td {
+  background-color: #f9f9f9;
 }
 
 .sortIcon {

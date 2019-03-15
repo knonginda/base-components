@@ -65,7 +65,7 @@ export default {
       type: String,
       default: 'small',
       validator: function(value) {
-        return ['large', 'medium', 'small'].indexOf(value) !== -1
+        return ['large', 'medium', 'small', 'xsmall'].indexOf(value) !== -1
       },
     },
     color: {
@@ -92,6 +92,8 @@ export default {
           ? this.$style.large
           : this.size === 'small'
           ? this.$style.small
+          : this.size === 'xsmall'
+          ? this.$style.xsmall
           : this.$style.medium,
         this.$style.baseIcon,
       ]
@@ -129,6 +131,11 @@ export default {
 .small {
   width: 16px;
   height: 16px;
+}
+
+.xsmall {
+  width: 12px;
+  height: 12px;
 }
 
 .medium {
