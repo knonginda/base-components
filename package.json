@@ -16,7 +16,8 @@
   "files": [
     "dist/index.common.js",
     "dist/index.css",
-    "package.json"
+    "package.json",
+    "README.md"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
