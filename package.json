@@ -1,8 +1,8 @@
 {
   "name": "@knonginda/base-components",
-  "version": "1.0.21",
+  "version": "1.0.3",
   "description": "## How to use: 1. Just use `npm install --save @knonginda/base-components` 2. Use the components in your file directly.",
-  "main": "./dist/base-components.common.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/knonginda/base-components.git"
@@ -14,11 +14,8 @@
     "test:snap": "vue-cli-service test:unit -u"
   },
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "dist/index.js",
+    "package.json"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
