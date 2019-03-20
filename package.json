@@ -14,7 +14,7 @@
     "test:snap": "vue-cli-service test:unit -u"
   },
   "files": [
-    "dist/index.js",
+    "dist/index.common.js",
     "package.json"
   ],
   "dependencies": {
