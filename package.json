@@ -1,15 +1,15 @@
 {
   "name": "@knonginda/base-components",
-  "version": "1.0.3",
+  "version": "1.0.31",
   "description": "## How to use: 1. Just use `npm install --save @knonginda/base-components` 2. Use the components in your file directly.",
-  "main": "./dist/index.js",
+  "main": "./dist/index.common.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/knonginda/base-components.git"
   },
   "scripts": {
     "dev": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --target lib --name base-components ./src/components/_globals.js",
+    "build": "vue-cli-service build --target lib --name index ./src/components/_globals.js",
     "test": "vue-cli-service test:unit --coverage",
     "test:snap": "vue-cli-service test:unit -u"
   },
