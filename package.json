@@ -1,6 +1,6 @@
 {
   "name": "@knonginda/base-components",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "## How to use: 1. Just use `npm install --save @knonginda/base-components` 2. Use the components in your file directly.",
   "main": "./dist/index.common.js",
   "repository": {
@@ -15,6 +15,7 @@
   },
   "files": [
     "dist/index.common.js",
+    "dist/index.css",
     "package.json"
   ],
   "dependencies": {
