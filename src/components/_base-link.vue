@@ -80,10 +80,25 @@ export default {
 </script>
 
 <template>
-  <a v-if="href" :href="href" :name="name" :target="target" v-bind="$attrs">
-    <slot/>
+  <a
+    v-if="href"
+    class="baseLink"
+    :href="href"
+    :name="name"
+    :target="target"
+    v-bind="$attrs"
+  >
+    <slot />
   </a>
-  <RouterLink v-else :to="routerLinkTo" v-bind="$attrs">
-    <slot/>
+  <RouterLink v-else class="baseLink" :to="routerLinkTo" v-bind="$attrs">
+    <slot />
   </RouterLink>
 </template>
+
+<style lang="scss" scoped>
+@import '@design';
+
+.baseLink {
+  color: $brand-blue;
+}
+</style>

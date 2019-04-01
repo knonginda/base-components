@@ -11,5 +11,4 @@ module.exports = {
   proseWrap: 'never',
   htmlWhitespaceSensitivity: 'strict',
   endOfLine: 'lf',
-  'editor.formatOnSave': true,
 }

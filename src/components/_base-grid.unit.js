@@ -1,14 +1,15 @@
+/* eslint-disable no-undef */
 import BaseGrid from './_base-grid'
 
 describe('@components/_base-grid', () => {
   it('renders its content', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
         query: {
           limit: 2,
-          offset: 0,
+          offset: 2,
           filterKey: '',
           sort: '',
           order: '',
@@ -19,7 +20,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('renders its content when order by DESC sort by ID', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -36,7 +37,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('renders its content by click header', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -57,7 +58,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('renders its content when filter by DD', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -74,7 +75,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('should select item by click checkbox', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -96,7 +97,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('should unselect item by click checkbox', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -128,7 +129,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('should select all item by click checkbox', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -149,7 +150,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('should unselect all item by click checkbox', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -174,7 +175,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('should jump to page 5 when you click on the page 5', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,
@@ -194,7 +195,7 @@ describe('@components/_base-grid', () => {
   })
 
   it('should turn to next page when click next button', () => {
-    const wrapper = mount(BaseGrid, {
+    const wrapper = shallowMount(BaseGrid, {
       propsData: {
         data: gridData,
         columns: gridColumns,

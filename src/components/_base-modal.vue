@@ -47,9 +47,9 @@ export default {
 
     buttonSpace: {
       type: String,
-      default: 'flex-end',
+      default: 'flexEnd',
       validator: function(value) {
-        return ['flex-start', 'flex-end', 'space-between'].indexOf(value) !== -1
+        return ['flexStart', 'flexEnd', 'spaceBetween'].indexOf(value) !== -1
       },
     },
   },
@@ -58,8 +58,6 @@ export default {
     return {
       visible: false,
       isOpen: false,
-      closeIcon: ['far', 'times-circle'],
-
       backups: {
         body: {
           height: null,
@@ -72,19 +70,6 @@ export default {
   computed: {
     hasTitle() {
       return this.title || this.$slots.title
-    },
-
-    overlayClasses() {
-      return [
-        this.$style.baseModalOverlay,
-        this.blocking ? this.$style.blocking : '',
-        this.visible ? this.$style.isVisible : '',
-        'base-modal-clickable',
-      ]
-    },
-
-    modalClasses() {
-      return [this.$style.baseModal, this.visible ? this.$style.isVisible : '']
     },
 
     modalContentStyle() {
@@ -165,7 +150,7 @@ export default {
     onOverlayClick(event) {
       if (
         !event.target.classList ||
-        event.target.classList.contains('base-modal-clickable')
+        event.target.classList.contains('baseModalClickable')
       ) {
         if (!this.blocking) {
           this.close()
@@ -178,14 +163,26 @@ export default {
 
 <template>
   <div>
-    <div v-show="isOpen" :class="overlayClasses" @click="onOverlayClick">
-      <div :class="modalClasses" :style="modalStyle">
-        <div v-if="!isHideCloseButton" :class="$style.baseActionClose" @click="close">
-          <BaseIcon color="#999999" :name="closeIcon"/>
+    <div
+      v-show="isOpen"
+      :class="[
+        'baseModalOverlay',
+        blocking ? 'blocking' : '',
+        visible ? 'isBaseModalOverlayVisible' : '',
+        'baseModalClickable',
+      ]"
+      @click="onOverlayClick"
+    >
+      <div
+        :class="['baseModal', visible ? 'isBaseModalVisible' : '']"
+        :style="modalStyle"
+      >
+        <div v-if="!isHideCloseButton" class="baseActionClose" @click="close">
+          <BaseIcon color="#333" name="x-cirlce" />
         </div>
 
         <!-- If title is present -->
-        <div v-if="hasTitle" :class="$style.baseTitle">
+        <div v-if="hasTitle" class="baseTitle">
           <template v-if="hasTitle">
             <!-- eslint-disable-next-line vue/no-v-html -->
             <h2 v-if="title" v-html="title"></h2>
@@ -194,21 +191,15 @@ export default {
         </div>
 
         <!-- Content: Wrapper -->
-        <div ref="content" :class="$style.baseContent" :style="modalContentStyle">
+        <div ref="content" class="baseContent" :style="modalContentStyle">
           <!-- Actual Content -->
-          <div v-if="$slots.default" :class="$style.baseContentContent">
-            <slot></slot>
-          </div>
+          <template v-if="$slots.default">
+            <slot class="baseContentContent"></slot>
+          </template>
         </div>
 
         <!-- Buttons -->
-        <div
-          v-if="$slots.button"
-          :class="[$style.baseButtons,
-            buttonSpace === 'flex-end'
-            ? $style.flexEnd : buttonSpace === 'flex-start'
-            ? $style.flexStart : $style.spaceBetween]"
-        >
+        <div v-if="$slots.button" :class="['baseButtons', buttonSpace]">
           <slot name="button"></slot>
         </div>
       </div>
@@ -216,152 +207,46 @@ export default {
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .baseModalOverlay {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: $layer-modal-z-index;
   width: 100vw;
   height: 100vh;
-  z-index: $layer-modal-z-index;
-
-  // Theming
   background: rgba(#fff, 0.9);
-
-  // Animation
   opacity: 0;
   transition: opacity 0.3s;
-  transform: translate3D(0, 0, 0);
-  -webkit-perspective: 500px;
-
-  &.isVisible {
-    opacity: 1;
-  }
-}
-
-.baseModal {
-  background: $color-modal-bg;
-  box-shadow: $color-modal-box-shadow;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  // transform: translate(-50%, -50%); // Done by the animation later
-
-  width: 100%;
-  max-width: 640px;
-  max-height: 100vh;
-  overflow-y: auto;
-  border-radius: 3px;
-
-  // Animation
-  transform: scale(0.9) translate(calc(-50% - 32px), -50%);
-  opacity: 0;
-
-  transition: {
-    property: transform, opacity;
-    duration: 0.3s;
-    delay: 0.05s;
-    timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);
-  }
-
-  &.isVisible {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-
-    .baseButtons,
-    .baseContent {
-      transform: none;
-      opacity: 1;
-    }
-  }
-}
-
-.baseTitle {
-  @include ellipsis;
-
-  height: 64px;
-  line-height: 64px;
-
-  border-bottom: 1px solid $color-modal-border;
-
-  padding: {
-    left: 32px;
-    right: 64px;
-  }
-
-  > h2 {
-    @include ellipsis;
-    @include mp0;
-
-    text-align: left;
-    font-weight: 500;
-    font-size: 22px;
-  }
+  transform: translate3d(0, 0, 0);
 }
 
 .baseContent {
   display: flex;
   line-height: 1.5;
+  transform: translateY(-8px);
 
   padding: {
-    left: 32px;
-    right: 32px;
     top: 24px;
+    right: 32px;
     bottom: 24px;
+    left: 32px;
   }
-}
-
-.baseContentContent {
-  flex-grow: 1;
 }
 
 .baseButtons {
   text-align: right;
+  border-top: 1px solid $color-modal-border;
+  transform: translateY(16px);
 
   padding: {
-    left: 20px;
-    right: 20px;
     top: 12px;
+    right: 20px;
     bottom: 12px;
+    left: 20px;
   }
-
-  &.flexEnd {
-    display: flex;
-    justify-content: flex-end;
-
-    button {
-      margin-left: 0;
-
-      &:last-child {
-        margin-left: 20px;
-      }
-    }
-  }
-
-  &.flexStart {
-    display: flex;
-    justify-content: flex-start;
-
-    button {
-      margin-right: 20px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-
-  &.spaceBetween {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.baseContent + .baseButtons {
-  border-top: 1px solid $color-modal-border;
 }
 
 .baseButtons,
@@ -375,19 +260,59 @@ export default {
   }
 }
 
-.baseContent {
-  transform: translateY(-8px);
+.baseModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 640px;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: $color-modal-bg;
+  border-radius: 3px;
+  box-shadow: $color-modal-box-shadow;
+  opacity: 0;
+  transform: scale(0.9) translate(calc(-50% - 32px), -50%);
+
+  transition: {
+    property: transform, opacity;
+    duration: 0.3s;
+    delay: 0.05s;
+    timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);
+  }
 }
 
-.baseButtons {
-  transform: translateY(16px);
+.baseTitle {
+  @include ellipsis;
+
+  height: 64px;
+  line-height: 64px;
+  border-bottom: 1px solid $color-modal-border;
+  padding: {
+    right: 64px;
+    left: 32px;
+  }
+
+  > h2 {
+    @include ellipsis;
+    @include mp0;
+
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+  }
+}
+
+.baseContentContent {
+  flex-grow: 1;
+  text-align: left;
 }
 
 .baseActionClose {
   > span {
     position: absolute;
-    right: 16px;
     top: 16px;
+    right: 16px;
     width: 28px !important;
     height: 28px !important;
     color: $medium-grey;
@@ -395,7 +320,51 @@ export default {
   }
 }
 
-.baseContentContent {
-  text-align: left;
+/* stylelint-disable */
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+
+  button {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    margin-left: 0;
+
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
+}
+/* stylelint-enable */
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.isBaseModalOverlayVisible {
+  opacity: 1;
+}
+
+.isBaseModalVisible {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+
+  .baseButtons,
+  .baseContent {
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>

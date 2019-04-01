@@ -3,7 +3,7 @@ export default {
   props: {
     users: {
       type: Array,
-      default: () => [],
+      default: null,
     },
     type: {
       type: String,
@@ -36,38 +36,21 @@ export default {
       default: false,
     },
   },
-  computed: {
-    overlayClasses() {
-      return [
-        this.theme === 'secondary'
-          ? this.$style.secondary
-          : this.theme === 'teritary'
-          ? this.$style.teritary
-          : this.$style.primary,
-        this.size === 'large'
-          ? this.$style.large
-          : this.size === 'small'
-          ? this.$style.small
-          : this.$style.medium,
-        this.ripple ? this.$style.ripple : '',
-      ]
-    },
-  },
 }
 </script>
 
 <template>
   <button
     :disabled="disabled"
-    :class="[overlayClasses, $style.button]"
+    :class="[theme, size, 'button']"
     v-on="$listeners"
     @click="click()"
   >
-    <slot/>
+    <slot />
   </button>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .button {
@@ -89,16 +72,16 @@ export default {
   background: $color-button-bg-primary;
   border: 2px solid $color-button-border-primary;
 
+  &:hover {
+    background: $color-button-hover-bg-primary;
+  }
+
   &:disabled {
     opacity: 0.5;
 
     &:hover {
       background: $color-button-bg-primary;
     }
-  }
-
-  &:hover {
-    background: $color-button-hover-bg-primary;
   }
 }
 
@@ -107,16 +90,16 @@ export default {
   background-color: #fff;
   border: 2px solid $color-button-border-secondary;
 
+  &:hover {
+    background: $color-button-hover-bg-secondary;
+  }
+
   &:disabled {
     opacity: 0.5;
 
     &:hover {
       background: #fff;
     }
-  }
-
-  &:hover {
-    background: $color-button-hover-bg-secondary;
   }
 }
 
@@ -125,6 +108,10 @@ export default {
   background-color: #fff;
   border: 2px solid $color-button-border-teritary;
 
+  &:hover {
+    background: $color-button-hover-bg-teritary;
+  }
+
   &:disabled {
     opacity: 0.5;
 
@@ -132,27 +119,26 @@ export default {
       background: #fff;
     }
   }
-
-  &:hover {
-    background: $color-button-hover-bg-teritary;
-  }
 }
 
 .small {
   @extend %typography-medium;
-  padding: $size-button-padding-small;
+
   min-width: $size-button-width-small;
+  padding: $size-button-padding-small;
 }
 
 .medium {
   @extend %typography-medium;
-  padding: $size-button-padding-medium;
+
   min-width: $size-button-width-medium;
+  padding: $size-button-padding-medium;
 }
 
 .large {
   @extend %typography-large;
-  padding: $size-button-padding-large;
+
   min-width: $size-button-width-large;
+  padding: $size-button-padding-large;
 }
 </style>

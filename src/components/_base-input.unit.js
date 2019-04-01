@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
 import BaseInput from './_base-input'
 
 describe('@components/_base-input', () => {
   it('works with v-model', () => {
-    const wrapper = mount(BaseInput, {
+    const wrapper = shallowMount(BaseInput, {
       propsData: {
         value: 'aaa',
       },

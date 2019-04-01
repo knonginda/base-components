@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import BaseCheckbox from './_base-checkbox'
 
 describe('@components/_base-checkbox', () => {

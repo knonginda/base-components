@@ -4,11 +4,11 @@ export default {
   props: {
     options: {
       type: Array,
-      default: () => [],
+      default: null,
     },
     value: {
       type: [String, Object],
-      default: () => {},
+      default: null,
     },
   },
   data() {
@@ -27,24 +27,36 @@ export default {
 </script>
 
 <template>
-  <div :class="[$style.selector, 'form-control']" @click="showOptions = !showOptions">
-    <div :class="$style.flexBetween">
-      <div :class="$style.selectName">{{ value ? value.value : 'Select' }}</div>
-      <div :class="$style.selectSymbol">
-        <BaseIcon v-if="!showOptions" color="#0099d6" source="ehealth" name="down-arrow"></BaseIcon>
-        <BaseIcon v-else color="#0099d6" source="ehealth" name="up-arrow"></BaseIcon>
+  <div class="selector formControl" @click="showOptions = !showOptions">
+    <div class="spaceBetween">
+      <div class="selectName">{{ value ? value.value : 'Select' }}</div>
+      <div class="selectSymbol">
+        <BaseIcon
+          v-if="!showOptions"
+          width="14"
+          height="14"
+          color="#0099d6"
+          name="down-arrow"
+        ></BaseIcon>
+        <BaseIcon
+          v-else
+          width="14"
+          height="14"
+          color="#0099d6"
+          name="up-arrow"
+        ></BaseIcon>
       </div>
     </div>
-    <ul v-show="showOptions" :class="$style.selectorOptions">
+    <ul v-show="showOptions" class="selectorOptions">
       <li v-for="(option, index) in options" :key="index">
-        <label :for="'selector_' + _uid + '_' + index" :class="$style.option">
+        <label :for="'selector_' + _uid + '_' + index" class="option">
           <input
             :id="'selector_' + _uid + '_' + index"
             type="radio"
             :value="option.value"
             :name="'selector_' + _uid"
             @change="onChange(option)"
-          >
+          />
           {{ option.value }}
         </label>
       </li>
@@ -52,54 +64,53 @@ export default {
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .selector {
-  background-color: #fff;
-  border: 1px solid $medium-grey;
   position: relative;
   cursor: pointer;
+  background-color: #fff;
+  border: 1px solid $color-select-border;
 }
 
-.flexBetween {
+.spaceBetween {
   display: flex;
-  height: $size-input-height;
   justify-content: space-between;
+  height: $size-input-height;
 }
 
 .selectName {
-  width: 100%;
   display: flex;
   align-items: center;
+  width: 100%;
   padding-left: 15px;
 }
 
 .selectSymbol {
-  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50px;
 }
 
 .selectorOptions {
   position: absolute;
   top: 38px;
-  width: 100%;
   z-index: $layer-dropdown-z-index;
+  width: 100%;
   border: 1px solid $lighter-grey;
 }
 
 .option {
-  height: $size-input-height;
   display: flex;
   align-items: center;
+  width: 100%;
+  height: $size-input-height;
   padding: 0 0 0 15px;
+  cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid $lighter-grey;
-  background-color: #fff;
-  width: 100%;
-  cursor: pointer;
 
   &:hover {
     background-color: #eee;

@@ -3,6 +3,8 @@ import fs from 'fs'
 import path from 'path'
 import vueTestUtils from '@vue/test-utils'
 import _ from 'lodash'
+import '@bo/icon-line4'
+
 _.mixin({
   pascalCase: _.flow(
     _.camelCase,
@@ -62,7 +64,14 @@ global.shallowMountView = (Component, options = {}) => {
 }
 
 // A helper for creating Vue component mocks
-global.createComponentMocks = ({ router, style, mocks, stubs, slots }) => {
+global.createComponentMocks = ({
+  router,
+  style,
+  mocks,
+  stubs,
+  slots,
+  directives,
+}) => {
   // Use a local version of Vue, to avoid polluting the global
   // Vue and thereby affecting other tests.
   // https://vue-test-utils.vuejs.org/api/#createlocalvue
@@ -92,6 +101,10 @@ global.createComponentMocks = ({ router, style, mocks, stubs, slots }) => {
     returnOptions.slots = {
       default: slots.default,
     }
+  }
+
+  if (directives) {
+    returnOptions.directives = directives
   }
 
   return returnOptions

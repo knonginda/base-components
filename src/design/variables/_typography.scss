@@ -4,15 +4,18 @@ $font-size-small: 14px;
 
 %typography-large {
   font-size: $font-size-large;
+
   @extend %font-content;
 }
 
 %typography-medium {
   font-size: $font-size-medium;
+
   @extend %font-content;
 }
 
 %typography-small {
   font-size: $font-size-small;
+
   @extend %font-content;
 }

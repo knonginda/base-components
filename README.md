@@ -6,12 +6,14 @@
 2. Now you can include the scripts by using following snippet:
 
 ```bash
-import Components from '@bo/base-components';
+// Load components
+import '@bo/base';
 
-// Global registration in your main.js/App.vue file
-Object.entried(Components).forEach((name, component) => {
-    Vue.component(name, component);
-});
+// Load styles
+import '@bo/base/assets/index.css';
+
+// Run server to check the guideline
+npm run dev
 ```
 
 ## List of components

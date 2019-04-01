@@ -21,18 +21,28 @@ $lightestx-grey: #f6f6f6;
 $brand-blue: $blue;
 $brand-green: $dark-green;
 
+// BORDER
+$color-border: $light-grey;
+$color-placeholder: $medium-grey;
+
 // CONTENT
-$color-body-bg: #f9f7f5;
+$color-body-bg: #fff;
 $color-text: #444;
-$color-heading-text: #35495e;
+$color-heading-text: #333;
 
 // LINKS
 $color-link-text: $brand-blue;
 $color-link-text-active: $color-text;
 
 // INPUTS
-$color-input-border: $light-grey;
-$color-input-placeholder: $medium-grey;
+$color-input-border: $color-border;
+
+// SELECTS
+$color-select-border: $color-border;
+
+// CHECKBOXS, RADIOS
+$color-checkbox-border: $color-border;
+$color-radio-border: $color-border;
 
 // BUTTONS
 $color-button-bg-primary: $brand-blue;
@@ -51,17 +61,16 @@ $color-button-text-teritary: $color-button-bg-teritary;
 $color-button-border-teritary: $light-grey;
 
 // MODAL
-$color-modal-border: $light-grey;
+$color-modal-border: $color-border;
 $color-modal-bg: #fff;
-$color-modal-box-shadow: 0 2px 4px 0 #999999;
+$color-modal-box-shadow: 0 2px 4px 0 #999;
 
 @function color($name) {
   @if map-has-key(getColors(), $name) {
     @return map-get(getColors(), $name);
-  }
-
-  @else {
+  } @else {
     @warn "Color not found: #{$name}";
+
     @return #000;
   }
 }

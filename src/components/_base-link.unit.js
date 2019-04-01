@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import BaseLink from './_base-link'
 
 const mountBaseLink = (options = {}) => {

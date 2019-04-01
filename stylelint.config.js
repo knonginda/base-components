@@ -1,4 +1,5 @@
 module.exports = {
+  processors: ['stylelint-processor-html'],
   extends: [
     // Use the Standard config as the base
     // https://github.com/stylelint/stylelint-config-standard

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import BaseTabs from './_base-tabs'
 
 const mountTabs = (options = {}) => {
@@ -121,5 +122,29 @@ describe('@components/_base-tabs', () => {
         .at(2)
         .classes()
     ).toContain('disabled')
+  })
+})
+
+describe('@components/_base-tabs', () => {
+  let wrapper = mountTabs({
+    propsData: {
+      size: 'large',
+    },
+  })
+
+  it('should render its content when size is large', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
+})
+
+describe('@components/_base-tabs', () => {
+  let wrapper = mountTabs({
+    propsData: {
+      size: 'small',
+    },
+  })
+
+  it('should render its content when size is small', () => {
+    expect(wrapper).toMatchSnapshot()
   })
 })

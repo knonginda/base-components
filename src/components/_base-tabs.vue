@@ -45,8 +45,8 @@ export default {
     },
     overlayItemClasses(tab, index) {
       return [
-        this.activeTabIndex === index ? this.$style.active : '',
-        tab.disabled ? this.$style.disabled : '',
+        this.activeTabIndex === index ? 'active' : '',
+        tab.disabled ? 'disabled' : '',
       ]
     },
   },
@@ -54,31 +54,32 @@ export default {
 </script>
 
 <template>
-  <div :class="[overlaySizeClasses, $style.tab]">
+  <div :class="[size, 'tab']">
     <ul>
       <li
         v-for="(tab, index) in tabList"
         :key="index"
         v-bind="tab.dataAttrs"
-        :class="[overlayItemClasses(tab, index), $style.tabItem]"
+        :class="[overlayItemClasses(tab, index), 'tabItem']"
         @click="select(index)"
-      >{{ tab.title }}</li>
+        >{{ tab.title }}</li
+      >
     </ul>
-    <div :class="$style.tabContent">
+    <div class="tabContent">
       <slot></slot>
     </div>
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .tab {
   > ul {
-    width: 100%;
     display: flex;
-    border-left: 1px solid $light-grey;
+    width: 100%;
     border-bottom: 1px solid $light-grey;
+    border-left: 1px solid $light-grey;
   }
 }
 
@@ -87,14 +88,12 @@ export default {
 }
 
 .tabItem {
-  background-color: #fff;
-  background-image: none;
+  margin-bottom: -1px;
+  cursor: pointer;
+  background-color: $lightestx-grey;
   border-top: 1px solid #ccc;
   border-right: 1px solid $light-grey;
   border-bottom: 1px solid $light-grey;
-  margin-bottom: -1px;
-  background-color: $lightestx-grey;
-  cursor: pointer;
 }
 
 .small .tabItem {
@@ -110,8 +109,8 @@ export default {
 }
 
 .disabled {
-  cursor: not-allowed;
   color: rgba(68, 68, 68, 0.3);
+  cursor: not-allowed;
 }
 
 .active {

@@ -15,7 +15,7 @@ export default {
     },
     dataAttrs: {
       type: Object,
-      default: () => {},
+      default: null,
     },
   },
   data() {
@@ -44,12 +44,12 @@ export default {
 </script>
 
 <template>
-  <div v-show="isActive" :class="isDisabled ? $style.disabled : ''">
+  <div v-show="isActive" :class="isDisabled ? 'disabled' : ''">
     <slot></slot>
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .disabled {

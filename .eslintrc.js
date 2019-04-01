@@ -2,11 +2,11 @@ module.exports = {
   root: true,
   parserOptions: {
     sourceType: 'script',
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   env: {
     node: true,
-    jest: true
+    jest: true,
   },
   extends: [
     'plugin:vue/recommended',
@@ -40,7 +40,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/**/*', 'tests/unit/**/*', 'tests/e2e/**/*'],
+      files: ['src/**/*', 'tests/unit/**/*'],
       excludedFiles: 'app.config.js',
       parserOptions: {
         parser: 'babel-eslint',

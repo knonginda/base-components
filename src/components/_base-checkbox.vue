@@ -33,23 +33,7 @@ export default {
     },
     change: {
       type: Function,
-      default: () => {},
-    },
-  },
-  data() {
-    return {
-      checkedIcon: ['far', 'square'],
-    }
-  },
-  computed: {
-    overlayClasses() {
-      return [
-        this.size === 'large'
-          ? this.$style.large
-          : this.size === 'small'
-          ? this.$style.small
-          : this.$style.medium,
-      ]
+      default: null,
     },
   },
   methods: {
@@ -57,7 +41,6 @@ export default {
       // Passing custom event from outside change.
       this.$emit('change')
       let isChecked = $event.target.checked
-      this.checkedIcon = isChecked ? 'check-square' : ['far', 'square']
       if (this.trueValue !== null && isChecked) {
         this.$emit('input', this.trueValue)
       } else if (this.falseValue !== null && !isChecked) {
@@ -71,7 +54,7 @@ export default {
 </script>
 
 <template>
-  <div :class="[$style.checkbox, overlayClasses]">
+  <div :class="[size, 'checkbox']">
     <input
       :id="id"
       type="checkbox"
@@ -80,9 +63,8 @@ export default {
       :true-value="trueValue"
       :false-value="falseValue"
       @change="onChange($event)"
-    >
+    />
     <label :for="id">
-      <BaseIcon :class="$style.checkedIcon" color="#8cc63e" :name="checkedIcon"/>
       <span>
         <slot></slot>
       </span>
@@ -90,57 +72,71 @@ export default {
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .checkbox {
-  input {
-    position: absolute;
-    left: -9999px;
-  }
-
   label {
-    cursor: pointer;
-    display: inline-block;
     position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      content: '';
+      background-color: #fff;
+      border: 2px solid $color-checkbox-border;
+    }
+
+    &::after {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 8px;
+      content: '';
+      background: transparent;
+      border: 3px solid #fff;
+      border-top: none;
+      border-right: none;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
 
     span {
-      height: 18px;
       display: inline-block;
-      margin-left: 5px;
+      margin-left: 23px;
     }
   }
 
-  .checkedIcon {
-    position: relative;
-    top: 1px;
+  input {
+    position: absolute;
+    left: -9999px;
+
+    &:checked {
+      ~ label::before {
+        background-color: $brand-green;
+        border: 2px solid $brand-green;
+      }
+
+      ~ label::after {
+        opacity: 1;
+      }
+    }
   }
-}
 
-.large {
-  @extend %typography-large;
-
-  .checkboxIcon {
-    width: 18px;
-    height: 18px;
+  &.large {
+    @extend %typography-large;
   }
-}
 
-.medium {
-  @extend %typography-medium;
-
-  .checkboxIcon {
-    width: 16px;
-    height: 16px;
+  &.medium {
+    @extend %typography-medium;
   }
-}
 
-.small {
-  @extend %typography-small;
-
-  .checkboxIcon {
-    width: 14px;
-    height: 14px;
+  &.small {
+    @extend %typography-small;
   }
 }
 </style>

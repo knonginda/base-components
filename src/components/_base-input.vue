@@ -33,16 +33,16 @@ export default {
   <input
     :id="id"
     :type="type"
-    :class="[$style.input, 'form-control']"
+    class="input form-control"
     :value="value"
     :name="name"
     :disabled="disabled"
     v-on="$listeners"
     @input="$emit('update', $event.target.value)"
-  >
+  />
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .input {
@@ -52,13 +52,13 @@ export default {
   width: 100%;
   height: $size-input-height;
   padding: $size-input-padding-vertical $size-input-padding-horizontal;
+  margin-bottom: 0;
   line-height: 1;
   border: $size-input-border solid $color-input-border;
   border-radius: $size-input-border-radius;
-  margin-bottom: 0;
 
   &::placeholder {
-    color: $color-input-placeholder;
+    color: $color-placeholder;
   }
 }
 </style>

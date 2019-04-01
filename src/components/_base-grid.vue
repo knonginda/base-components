@@ -5,11 +5,11 @@ export default {
   props: {
     data: {
       type: Array,
-      default: () => [],
+      default: null,
     },
     columns: {
       type: Array,
-      default: () => [],
+      default: null,
     },
     query: {
       type: Object,
@@ -190,34 +190,38 @@ export default {
 </script>
 
 <template>
-  <div>
-    <table :class="$style.table">
+  <div class="tableContainer">
+    <table class="table">
       <thead>
         <tr>
-          <th v-if="selector" :class="$style.selectorColumn">
-            <input v-model="isSelectAll" type="checkbox" @change="selectAll()">
+          <th v-if="selector" class="selectorColumn">
+            <input
+              v-model="isSelectAll"
+              type="checkbox"
+              @change="selectAll()"
+            />
           </th>
           <th
             v-for="(column, index) in columns"
             :key="index"
             :style="{ width: column.width }"
-            :class="sortKey === column.key ? $style.active : ''"
+            :class="sortKey === column.key ? 'active' : ''"
             @click="sortBy(column)"
           >
             {{ column.label }}
             <BaseIcon
               v-if="sortOrders[column.key] > 0"
-              :class-name="$style.sortIcon"
-              source="ehealth"
+              class-name="sortIcon"
               name="up-arrow"
-              size="xsmall"
+              width="12"
+              height="12"
             ></BaseIcon>
             <BaseIcon
               v-else
-              :class-name="$style.sortIcon"
-              source="ehealth"
+              class-name="sortIcon"
               name="down-arrow"
-              size="xsmall"
+              width="12"
+              height="12"
             ></BaseIcon>
           </th>
         </tr>
@@ -225,34 +229,46 @@ export default {
       <tbody>
         <tr v-for="(item, index) in filteredData" :key="index">
           <td v-if="selector">
-            <input v-model="item['isSelected']" type="checkbox" @change="select(item)">
+            <input
+              v-model="item['isSelected']"
+              type="checkbox"
+              @change="select(item)"
+            />
           </td>
-          <td v-for="(column, index2) in columns" :key="index2">{{ item[column.key] }}</td>
+          <td v-for="(column, index2) in columns" :key="index2">{{
+            item[column.key]
+          }}</td>
         </tr>
       </tbody>
     </table>
-    <div :class="$style.bottomSpace">
-      <div :class="$style.total">
+    <div class="bottomSpace">
+      <div class="total">
         Total:
         <strong>{{ total }}</strong>
       </div>
-      <ul :class="$style.pagination" name="Pagination">
-        <li v-if="!isFirstPage" :class="$style.pageItem" @click="turnPage(-1)">
-          <a href="#" :class="$style.pageLink" @click.prevent>
-            <BaseIcon name="caret-left"></BaseIcon>
+      <ul class="pagination" name="Pagination">
+        <li v-if="!isFirstPage" class="pageItem" @click="turnPage(-1)">
+          <a href="#" class="pageLink" @click.prevent>
+            <BaseIcon name="left-arrow" width="12" height="12"> </BaseIcon>
           </a>
         </li>
         <li
           v-for="(i, index) in dspBtns"
           :key="index"
-          :class="[$style.pageItem, i === curPage ? $style.currentPage : '']"
+          :class="['pageItem', i === curPage ? 'currentPage' : '']"
         >
-          <a v-if="i" href="#" :class="$style.pageLink" @click.prevent="handleClick(i)">{{ i }}</a>
-          <a v-else :class="$style.pageLink">...</a>
+          <a
+            v-if="i"
+            href="#"
+            class="pageLink"
+            @click.prevent="handleClick(i)"
+            >{{ i }}</a
+          >
+          <a v-else class="pageLink">...</a>
         </li>
-        <li v-if="!isLastPage" :class="$style.pageItem" @click="turnPage(1)">
-          <a href="#" :class="$style.pageLink" @click.prevent>
-            <BaseIcon name="caret-right"></BaseIcon>
+        <li v-if="!isLastPage" class="pageItem" @click="turnPage(1)">
+          <a href="#" class="pageLink" @click.prevent>
+            <BaseIcon name="right-arrow" width="12" height="12"> </BaseIcon>
           </a>
         </li>
       </ul>
@@ -260,114 +276,109 @@ export default {
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
-.table {
-  width: 100%;
-  height: 100%;
-  border: 1px solid $light-grey;
-  border-radius: 3px;
-  background-color: #fff;
-  border-collapse: collapse;
-  text-align: left;
-}
+.tableContainer {
+  .table {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid $light-grey;
+    border-radius: 3px;
+  }
 
-tr:nth-child(even) {
+  th,
   td {
-    background-color: $lightestx-grey;
-  }
-}
-
-th,
-td {
-  padding: 9px;
-  vertical-align: top;
-  border: 1px solid $light-grey;
-}
-
-th {
-  cursor: pointer;
-  color: #333;
-  background-color: $lightest-grey;
-  user-select: none;
-
-  > span {
-    color: #333 !important;
+    padding: 9px;
+    vertical-align: top;
+    border: 1px solid $light-grey;
   }
 
-  svg {
-    display: none;
+  tr:nth-child(even) {
+    td {
+      background-color: $lightestx-grey;
+    }
   }
 
-  &.active {
-    opacity: 1;
+  .sortIcon {
+    margin-left: 5px;
+  }
+
+  th {
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    background-color: $lightest-grey;
 
     > span {
       color: #333 !important;
     }
 
-    svg {
+    .sortIcon {
+      display: none !important;
+    }
+
+    &.active {
+      opacity: 1;
+
+      > span {
+        color: #333 !important;
+      }
+
+      .sortIcon {
+        display: inline-block !important;
+      }
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    ul {
+      display: flex;
+    }
+  }
+
+  .pageItem > a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    line-height: 26px;
+    color: #333;
+    text-align: center;
+    background: #f2f2f2;
+
+    .pageLink {
       display: block;
     }
   }
-}
 
-.sortIcon {
-  width: 14px;
-  height: 14px;
-  margin-left: 5px;
-}
+  .currentPage > a {
+    color: #fff;
+    background: $blue;
+  }
 
-.ellipsisIcon {
-  width: 12px;
-  height: 12px;
-}
-
-.pagination {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-end;
-
-  ul {
+  .bottomSpace {
     display: flex;
+    justify-content: space-between;
   }
-}
 
-.pageItem > a {
-  margin-left: 10px;
-  background: #f2f2f2;
-  width: 24px;
-  height: 24px;
-  text-align: center;
-  line-height: 26px;
-  color: #333;
-  display: block;
-
-  .pageLink {
-    display: block;
+  .total {
+    padding: 8px;
   }
-}
 
-.currentPage > a {
-  background: $blue;
-  color: #fff;
-}
+  .selectorColumn {
+    width: 36px;
 
-.bottomSpace {
-  display: flex;
-  justify-content: space-between;
-}
-
-.total {
-  padding: 8px;
-}
-
-.selectorColumn {
-  width: 36px;
-
-  svg ~ span {
-    display: none;
+    svg ~ span {
+      display: none;
+    }
   }
 }
 </style>

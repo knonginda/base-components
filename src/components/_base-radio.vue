@@ -40,21 +40,7 @@ export default {
       },
     },
   },
-  data() {
-    return {
-      radioIcon: ['far', 'circle'],
-    }
-  },
   computed: {
-    overlayClasses() {
-      return [
-        this.size === 'large'
-          ? this.$style.large
-          : this.size === 'small'
-          ? this.$style.small
-          : this.$style.medium,
-      ]
-    },
     state() {
       if (this.modelValue === undefined) {
         return this.checked
@@ -62,15 +48,7 @@ export default {
       return this.modelValue === this.value
     },
   },
-  watch: {
-    state(newValue, oldValue) {
-      if (newValue !== oldValue) {
-        this.toggleIcon(newValue)
-      }
-    },
-  },
   mounted() {
-    this.toggleIcon(this.state)
     if (this.checked && !this.state) {
       this.toggle()
     }
@@ -84,19 +62,12 @@ export default {
     toggle() {
       this.$emit('input', this.state ? '' : this.value)
     },
-    toggleIcon(state) {
-      if (state) {
-        this.radioIcon = 'dot-circle'
-      } else {
-        this.radioIcon = ['far', 'circle']
-      }
-    },
   },
 }
 </script>
 
 <template>
-  <div :class="[$style.radio, overlayClasses]">
+  <div :class="['radio', size]">
     <input
       :id="id"
       type="radio"
@@ -105,9 +76,8 @@ export default {
       :disabled="disabled"
       :checked="state"
       @change="onChange"
-    >
+    />
     <label :for="id">
-      <BaseIcon :class="$style.radioIcon" color="#8cc63e" :name="radioIcon"/>
       <span>
         <slot></slot>
       </span>
@@ -115,57 +85,57 @@ export default {
   </div>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
 
 .radio {
   input {
     position: absolute;
     left: -9999px;
-  }
 
-  label {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-
-    span {
-      height: 18px;
-      display: inline-block;
-      margin-left: 5px;
+    &:checked ~ label::after {
+      position: absolute;
+      top: 3px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      font-size: 12px;
+      content: '';
+      background: $brand-green;
+      border-radius: 50px;
     }
   }
 
-  .radioIcon {
+  label {
     position: relative;
-    top: 1px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      display: inline-block;
+      padding: 9px;
+      content: '';
+      background-color: #fff;
+      border: 1px solid $color-radio-border;
+      border-radius: 50%;
+    }
+
+    span {
+      display: inline-block;
+      margin: 1px 0 0 23px;
+    }
   }
 }
 
 .large {
   @extend %typography-large;
-
-  .radioIcon {
-    width: 18px;
-    height: 18px;
-  }
 }
 
 .medium {
   @extend %typography-medium;
-
-  .radioIcon {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 .small {
   @extend %typography-small;
-
-  .radioIcon {
-    width: 14px;
-    height: 14px;
-  }
 }
 </style>

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import BaseSelect from './_base-select'
 
 describe('@components/_base-radio', () => {

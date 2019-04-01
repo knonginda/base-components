@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import BaseModal from './_base-modal'
 
 const mountBaseModal = (options = {}) => {
@@ -80,7 +81,7 @@ describe('@components/_base-modal', () => {
     const wrapper = mountBaseModal()
     wrapper.vm.open()
     expect(wrapper.vm.$data.isOpen).toBe(true)
-    wrapper.find('.base-modal-clickable').trigger('click')
+    wrapper.find('.baseModalClickable').trigger('click')
     expect(wrapper.vm.$data.visible).toBe(false)
   })
 
@@ -92,7 +93,7 @@ describe('@components/_base-modal', () => {
     })
     wrapper.vm.open()
     expect(wrapper.vm.$data.isOpen).toBe(true)
-    wrapper.find('.base-modal-clickable').trigger('click')
+    wrapper.find('.baseModalClickable').trigger('click')
     expect(wrapper.vm.$data.isOpen).toBe(true)
   })
 })
